@@ -10,17 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
-{
-    if (!(c >= 9 && c <= 13) || (c >= 32 && c <= 126))
-        return (0);
-    else
-        return (1);
-}
+#include "libft.h"
 
+int	ft_isprint(int c)
+{
+	if (!(c >= 9 && c <= 13) || (c >= 32 && c <= 126))
+		return (0);
+	else
+		return (1);
+}
+/*
 int main(void)
 {
-    int a;
+	int a;
 
-    a = ft_isprint(5);
-}
+	a = ft_isprint(5);
+}*/

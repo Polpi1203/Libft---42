@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// renvoi True si il y'a uniquement des caractere alphabetique dans la chaine de caractere
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -20,7 +20,6 @@ int	ft_isalpha(int c)
 		return (1);
 }
 /*
-#include <stdio.h>
 int main(void)
 {
 	int a;

@@ -10,10 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// Cette fonction permet de copier le contenu d'une chaîne de caractère dans une autre, dans la limite de length caractères.
-
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
@@ -28,7 +25,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strcpy(char *str, char *copy, int length)
+char	*ft_strncpy(char *str, const char *copy, size_t length)
 {
 	int	i;
 	int	size_srce;
@@ -53,5 +50,5 @@ int main(void)
 	char copy[50] = "";
 	int length = 40;
 
-	printf("%s\n", ft_strcpy(str, copy, length));
+	printf("%s\n", ft_strncpy(str, copy, length));
 }*/

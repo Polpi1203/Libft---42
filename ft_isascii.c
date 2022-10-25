@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 13:50:36 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/24 13:50:43 by afaucher         ###   ########.fr       */
+/*   Created: 2022/10/25 16:53:14 by afaucher          #+#    #+#             */
+/*   Updated: 2022/10/25 16:54:36 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// renvoi True si il y'a uniquement des caractere alphabetique dans la chaine de caractere
+#include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (!(c >= 0 && c <= 127))
 		return (0);
@@ -20,10 +20,9 @@ int ft_isascii(int c)
 		return (1);
 }
 
+/*
 #include <stdio.h>
 int main(void)
 {
 	int a;
-
-	a = ft_isascii(5);
-}
+*/

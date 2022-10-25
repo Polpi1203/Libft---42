@@ -10,15 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// Cette fonction permet d'ajouter les «n» premiers caractères de la chaine de caractères «str1» à la chaine de caractères «str2».
-// Et de renvoyer le nombre final de caractère contenu dans dest !
+#include "libft.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int	ft_strlen(char *str)
+size_t	ft_strlen_1(char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -28,27 +24,25 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_strlcat(char *dest, char *src, int length)
+size_t	ft_strlcat(char *dest, const char *src, size_t length)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
+	size_t	len_dest;
 
-	i = ft_strlen(dest);
+	i = 0;
 	j = 0;
-	while (src[j] != '\0' && j < length)
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
+	len_dest = ft_strlen_1(dest);
+	while (dest[i] != '\0' && i < length)
+		i++
 	dest[i] = '\0';
-	return (ft_strlen(dest));
+	return (ft_strlen_1(dest));
 }
-/*
+
 int main(int argc, char **argv)
 {
 	(void)argc;
 
-	printf("%d\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
+	printf("%zu\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
+	printf("%lu\n", strlcat(argv[1], argv[2], atoi(argv[3])));
 }
-*/

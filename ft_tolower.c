@@ -10,22 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
-{
-    int lower;
+#include "libft.h"
 
-    lower = 0;
-    if (!(c >= 65 && c <= 90))
-        return (c);
-    else
-        lower = c + 32;
-    return (lower);
+int	ft_tolower(int c)
+{
+	int	lower;
+
+	lower = 0;
+	if (!(c >= 65 && c <= 90))
+		return (c);
+	else
+		lower = c + 32;
+	return (lower);
 }
 /*
-#include <stdio.h>
 
 int main(void)
 {
-    printf("%d\n", ft_tolower('C'));
+	printf("%d\n", ft_tolower('C'));
 }
 */
