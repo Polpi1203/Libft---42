@@ -3,40 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:37 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/24 10:47:39 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/10/25 20:41:41 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen_1(char *str)
+size_t ft_strlcat(char *dest, const char *src, size_t length)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-size_t	ft_strlcat(char *dest, const char *src, size_t length)
-{
-	size_t	i;
-	size_t	j;
-	size_t	len_dest;
+	size_t i;
+	size_t j;
+	size_t len_dest;
 
 	i = 0;
 	j = 0;
-	len_dest = ft_strlen_1(dest);
-	while (dest[i] != '\0' && i < length)
-		i++
-	dest[i] = '\0';
-	return (ft_strlen_1(dest));
+	len_dest = ft_strlen(dest);
+	while (src[j] != '\0' && len_dest < length - 1)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	if (length != 0 && length >= len_dest)
+		dest[i] = '\0';
+	if (length < ft_strlen(dest))
+		return (ft_strlen(src) + length);
+	else
+		return (ft_strlen(src) + len_dest);
 }
 
 int main(int argc, char **argv)
