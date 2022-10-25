@@ -9,8 +9,8 @@
 /*   Updated: 2022/10/25 09:16:55 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
+
+#include "libft.h"
 
 void *ft_memset(void *str, int c, size_t size)
 {   
@@ -24,14 +24,12 @@ void *ft_memset(void *str, int c, size_t size)
     }
     return (str);
 }
-
+/*
 int main(void)
 {
     char str[50] = "Je vais acheter du pain";
 
     printf("%s\n", ft_memset(str, '*', 5));
 
-    printf("%s\n", memset(str, '*', 5));
-
-
-}
+    //printf("%s\n", memset(str, '*', 5));
+}*/
