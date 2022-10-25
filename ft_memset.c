@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/24 14:16:08 by afaucher         ###   ########.fr       */
+/*   Created: 2022/10/25 09:16:51 by afaucher          #+#    #+#             */
+/*   Updated: 2022/10/25 09:16:55 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int ft_toupper(int c)
-{
-    int upper;
-
-    upper = 0;
-    if (!(c >= 97 && c <= 122))
-        return (c);
-    else
-        upper = c - 32;
-    return (upper);
-}
-/*
 #include <stdio.h>
+#include <string.h>
+
+void *ft_memset(void *str, int c, size_t size)
+{   
+    size_t  i;
+
+    i = 0;
+    while (i <= size)
+    {
+        *((unsigned char*)str + i) = c;
+        i++;
+    }
+    return (str);
+}
 
 int main(void)
 {
-    printf("%d\n", ft_toupper('a'));
+    char str[50] = "Je vais acheter du pain";
+
+    printf("%s\n", ft_memset(str, '*', 5));
+
+    printf("%s\n", memset(str, '*', 5));
+
+
 }
-*/
