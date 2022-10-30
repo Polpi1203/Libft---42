@@ -6,17 +6,17 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:37 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/25 20:41:41 by polpi            ###   ########.fr       */
+/*   Updated: 2022/10/30 14:50:11 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dest, const char *src, size_t length)
+size_t	ft_strlcat(char *dest, const char *src, size_t length)
 {
-	size_t i;
-	size_t j;
-	size_t len_dest;
+	size_t	i;
+	size_t	j;
+	size_t	len_dest;
 
 	i = 0;
 	j = 0;
@@ -33,12 +33,4 @@ size_t ft_strlcat(char *dest, const char *src, size_t length)
 		return (ft_strlen(src) + length);
 	else
 		return (ft_strlen(src) + len_dest);
-}
-
-int main(int argc, char **argv)
-{
-	(void)argc;
-
-	printf("%zu\n", ft_strlcat(argv[1], argv[2], atoi(argv[3])));
-	printf("%lu\n", strlcat(argv[1], argv[2], atoi(argv[3])));
 }

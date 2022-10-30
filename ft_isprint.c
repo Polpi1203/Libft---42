@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/24 14:16:08 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:36:36 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 int	ft_isprint(int c)
 {
-	if (!(c >= 9 && c <= 13) || (c >= 32 && c <= 126))
+	if (!((c >= 32 && c <= 126)))
 		return (0);
 	else
 		return (1);
 }
-/*
-int main(void)
-{
-	int a;
-
-	a = ft_isprint(5);
-}*/

@@ -6,17 +6,17 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:11:03 by polpi             #+#    #+#             */
-/*   Updated: 2022/10/25 20:12:17 by polpi            ###   ########.fr       */
+/*   Updated: 2022/10/30 14:50:42 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int i;
-	int p;
-	int result;
+	int	i;
+	int	p;
+	int	result;
 
 	i = 0;
 	p = 1;

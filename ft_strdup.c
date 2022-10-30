@@ -6,12 +6,11 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:23 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/30 14:17:26 by polpi            ###   ########.fr       */
+/*   Updated: 2022/10/30 14:49:11 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 char	*ft_strdup(const char *str)
 {
