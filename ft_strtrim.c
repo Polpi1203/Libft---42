@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:56:31 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/26 10:31:56 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:40:08 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char c, char const *set)
+int	check_rim(char c, char const *set)
 {
 	while (*set != '\0')
 	{
@@ -32,7 +32,7 @@ int	size_result(char const *s1, char const *set)
 	size = 0;
 	while (s1[i] != '\0')
 	{
-		if (check(s1[i], set) == 0)
+		if (check_rim(s1[i], set) == 0)
 			size++;
 		i++;
 	}
@@ -52,7 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (s1[i] != '\0')
 	{
-		if (check(s1[i], set) == 0)
+		if (check_rim(s1[i], set) == 0)
 		{
 			result[j] = s1[i];
 			j++;

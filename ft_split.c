@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 10:32:58 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/26 13:39:45 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/10/30 16:43:45 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char p, char c)
+int	check_split(char p, char c)
 {
 	if (p == c)
 		return (1);
@@ -28,7 +28,7 @@ int	size_array(char const *s, char c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (check(s[i], c) == 1)
+		if (check_split(s[i], c) == 1)
 			size++;
 		i++;
 	}
@@ -40,7 +40,7 @@ int	count_word(const char *str, char c)
 	int	i;
 
 	i = 0;
-	while (check(str[i], c) == 0)
+	while (check_split(str[i], c) == 0)
 		i++;
 	return (i);
 }
@@ -76,14 +76,14 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s != '\0')
 	{	
-		while (*s != '\0' && check(*s, c) == 1)
+		while (*s != '\0' && check_split(*s, c) == 1)
 			s++;
-		if (*s != '\0' && check(*s, c) == 0)
+		if (*s != '\0' && check_split(*s, c) == 0)
 		{
 			result[i] = ft_copy(s, c);
 			i++;
 		}
-		while (*s != '\0' && check(*s, c) == 0)
+		while (*s != '\0' && check_split(*s, c) == 0)
 			s++;
 	}
 	result[i] = 0;
