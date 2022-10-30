@@ -3,45 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:48:31 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/24 10:48:33 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/10/30 14:24:22 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+char	*ft_strncpy(char *dst, const char *src, size_t length)
 {
-	int	i;
+	int		i;
+	size_t	size_srce;
 
 	i = 0;
-	while (str[i] != '\0')
+	size_srce = ft_strlen(src);
+	while (src[i] != '\0' && i < length)
 	{
-		i++;
-	}
-	printf("%d\n", i);
-	return (i);
-}
-
-char	*ft_strncpy(char *str, const char *copy, size_t length)
-{
-	int	i;
-	int	size_srce;
-
-	i = 0;
-	size_srce = ft_strlen(str);
-	while (str[i] != '\0' && i < length)
-	{
-		copy[i] = str[i];
+		dst[i] = src[i];
 		i++;
 	}
 	if (size_srce <= length)
 	{
-		copy[i] = str[i];
+		dst[i] = src[i];
 	}
-	return (copy);
+	return (dst);
 }
 /*
 int main(void)
