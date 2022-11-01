@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:55:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 17:07:54 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/01 20:05:38 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
+/*
 int main(int argc, char **argv)
 {
 	(void)argc;
@@ -39,3 +39,4 @@ int main(int argc, char **argv)
 	printf("%s\n", memchr("bonjour", 'n', 2));
 	
 }
+*/

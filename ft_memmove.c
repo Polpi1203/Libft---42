@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 09:42:34 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/01 10:34:56 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/01 20:37:51 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*d;
-	char	*s;
 	size_t	i;
 
-	d = (char *)dst;
-	s = (char *)src;
 	i = 0;
-	if (d < s)
+	if (!dst && !src)
+		return (0);
+	if (dst > src)
 	{
-		while (len != 0)
+		while (len > 0)
 		{
-			d[len] = s[len];
+			((unsigned char *)dst)[len - 1] = ((unsigned char *)src)[len - 1];
 			len--;
 		}
 	}
 	else
 	{
-		while (i != len)
+		while (i < len)
 		{
-			d[i] = s[i];
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
 	}
