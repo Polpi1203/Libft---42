@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:37 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/30 14:50:11 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/01 10:53:04 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t length)
 	i = 0;
 	j = 0;
 	len_dest = ft_strlen(dest);
-	while (src[j] != '\0' && len_dest < length - 1)
+	while (src[j] != '\0' && len_dest <= length - 1)
 	{
 		dest[i] = src[j];
 		i++;

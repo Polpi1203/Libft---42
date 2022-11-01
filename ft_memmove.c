@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 07:37:17 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/01 10:48:04 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/01 09:42:34 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/01 10:34:56 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*result;
+	char	*d;
+	char	*s;
+	size_t	i;
 
-	result = (char *)malloc(count * size);
-	if (result == NULL)
-		return (NULL);
-	ft_bzero(result, size);
-	//free(result);
-	return (result);
+	d = (char *)dst;
+	s = (char *)src;
+	i = 0;
+	if (d < s)
+	{
+		while (len != 0)
+		{
+			d[len] = s[len];
+			len--;
+		}
+	}
+	else
+	{
+		while (i != len)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	return (dst);
 }
-/*
-int main(void)
-{
-	char *a;
-
-	a = ft_calloc(5, 2);
-
-	printf("%lu\n", sizeof(a));
-
-	a = calloc(8, 4);
-
-	printf("%lu\n", sizeof(a));
-}
-*/
