@@ -1,41 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 10:48:31 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/30 14:24:22 by polpi            ###   ########.fr       */
+/*   Created: 2022/11/01 07:04:15 by polpi             #+#    #+#             */
+/*   Updated: 2022/11/01 07:28:20 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t length)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int		i;
-	size_t	size_srce;
+	size_t	i;
 
 	i = 0;
-	size_srce = ft_strlen(src);
-	while (src[i] != '\0' && i < length)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < dstsize - 1)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	if (size_srce <= length)
-	{
-		dst[i] = src[i];
-	}
-	return (dst);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 /*
 int main(void)
 {
-	char str[50] = "Je vais à la boulangerie chercher du pain !!! ";
-	char copy[50] = "";
-	int length = 40;
+	char    *dest;
+	char    *src;
+	size_t  dstsize;
 
-	printf("%s\n", ft_strncpy(str, copy, length));
-}*/
+	src = "ABCDEFGH";
+	dest = NULL;
+	dstsize = 3;
+
+	printf("%d\n", ft_strlcpy(dest, src, dstsize));
+	printf("%d\n", strlcpy(dest, src, dstsize));
+}
+*/

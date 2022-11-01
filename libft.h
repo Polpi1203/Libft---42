@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/30 14:48:30 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/01 07:30:51 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char	*ft_strncpy(char *dst, const char *src, size_t length);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t length);
 char	*ft_strdup(const char *str);
@@ -36,5 +35,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 void	*calloc(size_t count, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 #endif
