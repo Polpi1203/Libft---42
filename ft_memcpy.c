@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:56:11 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 09:25:18 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/01 13:45:56 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memcpy(void *dst, const void	*src, size_t n)
 int main(void)
 {
 	char    dst[50] = {0};
-	char    src[50] = "56156fqefqefqfqefqefqefqe";
+	char    src[50] = {0};
 
 	printf("%s\n", ft_memcpy(dst, src, 7));
 	printf("%s\n", memcpy(dst, src, 7));

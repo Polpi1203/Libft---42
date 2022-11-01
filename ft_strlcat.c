@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:37 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 10:53:04 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/01 12:50:57 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t length)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
@@ -21,16 +21,42 @@ size_t	ft_strlcat(char *dest, const char *src, size_t length)
 	i = 0;
 	j = 0;
 	len_dest = ft_strlen(dest);
-	while (src[j] != '\0' && len_dest <= length - 1)
+	while (src[j] != '\0' && len_dest < size - 1)
 	{
-		dest[i] = src[j];
+		dest[len_dest] = src[i];
 		i++;
-		j++;
+		len_dest++;
 	}
-	if (length != 0 && length >= len_dest)
+	if (size != 0 && size >= len_dest)
 		dest[i] = '\0';
-	if (length < ft_strlen(dest))
-		return (ft_strlen(src) + length);
+	if (size < ft_strlen(dest))
+		return (ft_strlen(src) + size);
 	else
 		return (ft_strlen(src) + len_dest);
 }
+/*
+size_t		ft_strlcat(char *dest, const char *src, size_t size)
+{
+	size_t		idx;
+	size_t		src_idx;
+	size_t		value;
+
+	if (size == 0)
+		return (ft_strlen(src));
+	else if (size < ft_strlen(dest))
+		value = ft_strlen(src) + size;
+	else
+		value = ft_strlen(src) + ft_strlen(dest);
+	idx = 0;
+	while (dest[idx] != '\0')
+		idx++;
+	src_idx = 0;
+	while (src[src_idx] != '\0' && idx + 1 < size)
+	{
+		dest[idx] = src[src_idx];
+		src_idx++;
+		idx++;
+	}
+	dest[idx] = '\0';
+	return (value);
+}*/
