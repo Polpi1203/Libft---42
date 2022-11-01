@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 07:37:17 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/01 10:48:04 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/01 14:46:19 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t count, size_t size)
 }
 /*
 int main(void)
-{
+{f
 	char *a;
 
 	a = ft_calloc(5, 2);
