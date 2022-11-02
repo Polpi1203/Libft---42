@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/02 18:10:52 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/02 20:43:10 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <unistd.h>
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -45,5 +46,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 void    *ft_memchr(const void *s, int c, size_t n);
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void    ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
