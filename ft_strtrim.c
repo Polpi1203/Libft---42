@@ -3,15 +3,53 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:56:31 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 16:39:47 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 18:16:29 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	get_start_index(const char *s1, char const *set)
+{
+	size_t	i;
+
+	i = 0;
+	while (s1[i] && ft_strchr(set, s1[i]) != NULL)
+		i++;
+	return (i);
+}
+
+static int	get_end_index(const char *s1, char const *set)
+{
+	size_t	len;
+	size_t	i;
+
+	len = ft_strlen(s1);
+	i = 0;
+	while (i < len && ft_strchr(set, s1[len - i - 1]) != NULL)
+		i++;
+	return (len - i);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	start;
+	size_t	end;
+
+	start = get_start_index(s1, set);
+	end = get_end_index(s1, set);
+	if (start >= end)
+		return (ft_strdup(""));
+	str = malloc(sizeof(*str) * (end - start + 1));
+	if (str != NULL)
+		ft_strlcpy(str, s1 + start, (end - start + 1));
+	return (str);
+}
+/*
 int	check_rim(char c, char const *set)
 {
 	while (*set != '\0')
@@ -62,7 +100,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[j] = '\0';
 	return (result);
 }
-/*
+
 int	main(int argc, char **argv)
 {
 	(void)argc;
