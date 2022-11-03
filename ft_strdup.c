@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:23 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/30 14:49:11 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 18:55:35 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *str)
 	size = ft_strlen(str);
 	i = 0;
 	copie = (char *)malloc(sizeof(char) * (size + 1));
+	if (copie == NULL)
+		return (NULL);
 	while (str[i] != '\0')
 	{
 		copie[i] = str[i];
