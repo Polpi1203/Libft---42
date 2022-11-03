@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:44:03 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 16:30:09 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 18:50:21 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,25 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*result;
-	size_t		i;
+	char	*str;
 
-	result = (char *)malloc(sizeof(char) * len + 1);
-	if (result == NULL)
-		return (NULL);
-	i = 0;
-	while (i < len)
-		result[i++] = s[start++];
-	result[i] = '\0';
-	return (result);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s) - start;
+	str = malloc(sizeof(*str) * (len + 1));
+	if (str != NULL)
+	{
+		ft_memcpy(str, s + start, len);
+		str[len] = '\0';
+	}
+	return (str);
 }
 /*
 int	main(int argc, char **argv)
 {
 	(void)argc;
-	printf("%s\n", ft_substr(argv[1], 3, 8));
+	(void)argv;
+	printf("%s\n", ft_substr("abcdefghijklmnopppppppp", 7, 10));
 }
 */
