@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 07:37:17 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/03 16:29:30 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 18:22:13 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*result;
+	void	*result;
 
-	result = (char *)malloc(count * size);
+	result = malloc(count * size);
 	if (result == NULL)
 		return (NULL);
-	ft_bzero(result, size);
-	free(result);
+	else
+		ft_bzero(result, count * size);
 	return (result);
 }
 /*
