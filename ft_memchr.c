@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:55:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 20:05:38 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 14:16:09 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,23 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
-	unsigned char	*result;
-	unsigned char	p;
-
-	result = (unsigned char *)s;
-	p = (unsigned char)c;		
+	
 	i = 0;
 	while (i < n)
 	{
-		if (*result == p)
-			return (result);
-		result++;
+		if (((unsigned char *)s)[i] == (unsigned char) c)
+			return ((void *)s + i);
+		i++;
 	}
 	return (NULL);
 }
-/*
+
 int main(int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
 
-	printf("%s\n", ft_memchr("bonjour", 'n', 2));
-	printf("%s\n", memchr("bonjour", 'n', 2));
+	printf("%s\n", ft_memchr("/|\x12\xff\x09\x42\042\42|\\", '/x42', 2));
+	printf("%s\n", memchr("/|\x12\xff\x09\x42\042\42|\\", '\x42', 2));
 	
 }
-*/

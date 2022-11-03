@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 10:46:27 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 13:02:49 by afaucher         ###   ########.fr       */
+/*   Created: 2022/11/03 09:51:24 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/03 10:22:39 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (*str != '\0')
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
 	}
-	if (*str == (char)c)
-		return ((char *)str);
-	if (c == 0)
-		return((char *)str);
-	return (NULL);
+	return (0);
 }
 /*
 int main(void)
 {
-	const char    str[50] = "the cake is a lie !\0I'm hidden lol\r\n";
+	char	*s1;
+	char	*s2;
 
-	printf("%s\n", ft_strchr(str, 'x'));
-	printf("%s\n", strchr(str, 'x'));
+	s1 = "123456789";
+	s2 = "193456789";
+
+	printf("%d\n", ft_memcmp(s1, s2, 5));
 }
 */

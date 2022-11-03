@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 10:46:27 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 13:02:49 by afaucher         ###   ########.fr       */
+/*   Created: 2022/11/03 10:23:47 by afaucher          #+#    #+#             */
+/*   Updated: 2022/11/03 10:44:10 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	while (*str != '\0')
-	{
-		if (*str == (char)c)
-			return ((char *)str);
-		str++;
+	int	len;
+
+	len = ft_strlen(s);
+	while (len >= 0)
+	{	
+		if(s[len] == (char)c)
+			return (((char *)s) + len);
+		len --;
 	}
-	if (*str == (char)c)
-		return ((char *)str);
-	if (c == 0)
-		return((char *)str);
 	return (NULL);
 }
 /*
 int main(void)
 {
-	const char    str[50] = "the cake is a lie !\0I'm hidden lol\r\n";
+	const char	*s;
 
-	printf("%s\n", ft_strchr(str, 'x'));
-	printf("%s\n", strchr(str, 'x'));
+	s = "bonjour";
+
+	printf("%s\n", ft_strrchr(s, 'o'));
+	printf("%s\n", strrchr(s, 'o'));
+	
 }
 */
