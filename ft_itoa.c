@@ -6,49 +6,52 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:46:32 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/29 08:25:08 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 16:29:33 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int	size_int(int n)
+size_t	ft_nb(int nb)
 {
-	int	len;
+	int	i;
 
-	len = 0;
-	while (n != 0)
+	i = 0;
+	if (nb <= 0)
+		i++;
+	while (nb != '\0')
 	{
-		len++;
-		n = n / 10;
+		nb = nb / 10;
+		i++;
 	}
-	printf("%d\n", len);
-	return (len);
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*result;
 	int		i;
-	int		size;
-	int		inter;
+	char	*str;
+	long	nb;
 
-	inter = 0;
-	size = size_int(n);
-	i = 0;
-	result = (char *)malloc(sizeof(char) * size);
-
-	while (i < size)
+	i = ft_nb(n);
+	nb = n;
+	str = malloc(sizeof(char) * i + 1);
+	if (!str)
+		return (NULL);
+	if (nb < 0)
 	{
-		inter = n % 10;
-		n = n / 10;
-		result[i] = inter + 48;
-		i++;
+		str[0] = '-';
+		nb = -nb;
 	}
-	return(result);
-}
-int main(void)
-{
-	printf("%s\n", ft_itoa(123456));
+	if (nb == 0)
+		str[0] = '0';
+	str[i] = '\0';
+	i--;
+	while (nb != '\0')
+	{
+		str[i] = nb % 10 + '0';
+		i--;
+		nb = nb / 10;
+	}
+	return (str);
 }

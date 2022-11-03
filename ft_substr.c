@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:44:03 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 14:26:18 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:30:09 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char		*result;
 	size_t		i;
 
-	result = (char *)malloc(sizeof(char) * len);
+	result = (char *)malloc(sizeof(char) * len + 1);
 	if (result == NULL)
 		return (NULL);
 	i = 0;

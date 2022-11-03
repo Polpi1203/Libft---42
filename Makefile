@@ -32,6 +32,7 @@ SRCS	= 	ft_atoi.c\
 			ft_putnbr_fd.c\
 			ft_memcmp.c\
 			ft_strrchr.c\
+			ft_itoa.c\
 
 OBJS	=	${SRCS:.c=.o}
 
