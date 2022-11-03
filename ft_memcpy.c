@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:56:11 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 14:52:55 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/03 14:53:36 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = dst;
 	s = src;
-	if (d == NULL && s == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
 	while (i < n)
 	{
