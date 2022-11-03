@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:55:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 14:16:09 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/03 14:28:26 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char) c)
+		if (((unsigned char *)s)[i] == (unsigned char)c)
 			return ((void *)s + i);
 		i++;
 	}
 	return (NULL);
 }
-
+/*
 int main(int argc, char **argv)
 {
 	(void)argc;
@@ -35,3 +35,4 @@ int main(int argc, char **argv)
 	printf("%s\n", memchr("/|\x12\xff\x09\x42\042\42|\\", '\x42', 2));
 	
 }
+*/

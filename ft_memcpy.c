@@ -6,20 +6,26 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:56:11 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 13:45:56 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/03 14:52:55 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void	*src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	size_t		i;
+	char		*d;
+	const char	*s;
 
 	i = 0;
+	d = dst;
+	s = src;
+	if (d == NULL && s == NULL)
+		return (NULL);
 	while (i < n)
 	{
-		*((char *)dst + i) = *((char *) src + i);
+		d[i] = s[i];
 		i++;
 	}
 	return (dst);
@@ -27,10 +33,10 @@ void	*ft_memcpy(void *dst, const void	*src, size_t n)
 /*
 int main(void)
 {
-	char    dst[50] = {0};
-	char    src[50] = {0};
+	//char    dst[50] = {0};
+	//char    src[50] = {0};
 
-	printf("%s\n", ft_memcpy(dst, src, 7));
-	printf("%s\n", memcpy(dst, src, 7));
+	printf("%s\n", ft_memcpy(((void *)0), ((void *)0), 3));
+	printf("%s\n", memcpy(((void *)0), ((void *)0), 3));
 }
 */
