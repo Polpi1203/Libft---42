@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 10:32:58 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/30 16:43:45 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 15:24:42 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,11 @@ char	**ft_split(char const *s, char c)
 int	main(int argc, char **argv)
 {
 	(void)argc;
+	(void)argv;
 	int i;
     char **copie;
 
-    copie = ft_split(argv[1], 'a');
+    copie = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
     i = 0;
     while (copie[i] != 0)
     {

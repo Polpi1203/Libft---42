@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:56:31 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 09:49:14 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/03 15:22:04 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[j] = '\0';
 	return (result);
 }
-/*
+
 int	main(int argc, char **argv)
 {
 	(void)argc;
 	printf("%s\n", ft_strtrim(argv[1], argv[2]));
 }
-*/
