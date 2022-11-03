@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
+/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 10:23:47 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 10:44:10 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/03 20:29:31 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	len;
+	char	*result;
 
-	len = ft_strlen(s);
-	while (len >= 0)
+	result = NULL;
+	while (*s != '\0')
 	{	
-		if(s[len] == (char)c)
-			return (((char *)s) + len);
-		len --;
+		if (*s == (char)c)
+			result = (char *)(s);
+		s++;
 	}
-	return (NULL);
+	if ((char)c == '\0')
+		result = (char *)(s);
+	return (result);
 }
 /*
 int main(void)

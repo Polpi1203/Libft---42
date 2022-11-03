@@ -6,7 +6,7 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 17:28:48 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/03 17:53:48 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/03 20:18:41 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n && (((unsigned char *)s1)[i] != '\0' || ((unsigned char *)s2)[i] != '\0'))
+	while (i < n
+		&& (((unsigned char *)s1)[i] != '\0'
+		|| ((unsigned char *)s2)[i] != '\0'))
 	{
 		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
 			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
