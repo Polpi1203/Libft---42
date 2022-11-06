@@ -6,13 +6,11 @@
 /*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:46:27 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 20:24:20 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/06 10:51:32 by polpi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 char	*ft_strchr(const char *str, int c)
 {
