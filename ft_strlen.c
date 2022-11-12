@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:54 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/24 10:47:56 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (i);
 }
-/*
-
-int main(int argc, char **argv)
-{
-	(void)argc;
-	printf("%d\n", ft_strlen(argv[1]));
-}
-*/

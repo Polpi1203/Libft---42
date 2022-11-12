@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 13:45:56 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (1);
 }
-/*
-int main(void)
-{
-	int a;
-
-	a = ft_isdigit(5);
-}
-*/

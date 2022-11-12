@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 17:43:09 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/02 18:07:56 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
-/*
-int main(int argc, char **argv)
-{
-	(void)argc;
-	(void)argv;
-
-	const char	*test;
-
-	test = "Je vais a la boulangerie";
-
-	printf("%s\n", ft_strmapi(test, &f));
-
-}
-
-char	f(unsigned int k, char c)
-{
-	k = 0;
-	k = c;
-	c = k;
-	return(c);
-}
-*/

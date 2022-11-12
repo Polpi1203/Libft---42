@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:57:18 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/06 10:51:17 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd((n % 10 + '0'), fd);
 	}
 }
-/*
-int main(void)
-{
-	ft_putnbr_fd(-2147483648, 1);
-}
-*/

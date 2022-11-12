@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 17:28:48 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/03 20:18:41 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }	
-/*
-int main(void)
-{
-	char	*s1;
-	char	*s2;
-
-	s1 = "atoms\0\0\0\0";
-	s2 = "atoms\0abc";
-
-	printf("%d\n", ft_strncmp(s1, s2, 8));
-	printf("%d\n", strncmp(s1, s2, 8));
-
-}
-*/

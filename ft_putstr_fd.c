@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 20:42:48 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/02 20:45:33 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-/*
-int main(void)
-{
-	char	*s;
-
-	s = "Je vais a la boulangerie";
-
-	ft_putstr_fd(s, 1);
-}
-*/

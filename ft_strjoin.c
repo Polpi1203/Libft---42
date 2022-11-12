@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:22:13 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 20:13:45 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i] = '\0';
 	return (result);
 }
-/*
-int	main(int argc, char **argv)
-{
-	(void)argc;
-	printf("%s\n", ft_strjoin(argv[1], argv[2]));
-}
-*/

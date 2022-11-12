@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:16:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/24 14:16:08 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ int	ft_tolower(int c)
 		lower = c + 32;
 	return (lower);
 }
-/*
-
-int main(void)
-{
-	printf("%d\n", ft_tolower('C'));
-}
-*/

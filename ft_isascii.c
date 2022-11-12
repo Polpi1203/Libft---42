@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afaucher <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 16:53:14 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/25 16:54:36 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (1);
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-	int a;
-*/

@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 09:51:24 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 10:22:39 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int main(void)
-{
-	char	*s1;
-	char	*s2;
-
-	s1 = "123456789";
-	s2 = "193456789";
-
-	printf("%d\n", ft_memcmp(s1, s2, 5));
-}
-*/

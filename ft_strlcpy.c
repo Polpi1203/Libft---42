@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 07:04:15 by polpi             #+#    #+#             */
-/*   Updated: 2022/11/01 07:28:20 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-/*
-int main(void)
-{
-	char    *dest;
-	char    *src;
-	size_t  dstsize;
-
-	src = "ABCDEFGH";
-	dest = NULL;
-	dstsize = 3;
-
-	printf("%d\n", ft_strlcpy(dest, src, dstsize));
-	printf("%d\n", strlcpy(dest, src, dstsize));
-}
-*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:55:06 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 20:17:05 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int main(int argc, char **argv)
-{
-	(void)argc;
-	(void)argv;
-
-	printf("%s\n", ft_memchr("/|\x12\xff\x09\x42\042\42|\\", '/x42', 2));
-	printf("%s\n", memchr("/|\x12\xff\x09\x42\042\42|\\", '\x42', 2));
-	
-}
-*/

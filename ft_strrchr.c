@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 10:23:47 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 20:29:31 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ char	*ft_strrchr(const char *s, int c)
 		result = (char *)(s);
 	return (result);
 }
-/*
-int main(void)
-{
-	const char	*s;
-
-	s = "bonjour";
-
-	printf("%s\n", ft_strrchr(s, 'o'));
-	printf("%s\n", strrchr(s, 'o'));
-	
-}
-*/

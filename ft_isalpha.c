@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:50:36 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/01 14:23:55 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (1);
 }
-/*
-int main(void)
-{
-	printf("%d\n", ft_isalpha('A'));
-}
-*/

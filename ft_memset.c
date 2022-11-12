@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 09:16:51 by afaucher          #+#    #+#             */
-/*   Updated: 2022/10/30 15:39:27 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,3 @@ void	*ft_memset(void *str, int c, size_t size)
 	}
 	return (str);
 }
-/*
-int main(void)
-{
-	char str[50] = "Je vais acheter du pain";
-
-	printf("%s\n", ft_memset(str, '*', 5));
-
-	//printf("%s\n", memset(str, '*', 5));
-}*/

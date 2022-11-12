@@ -6,7 +6,7 @@
 /*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:47:23 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 18:55:35 by afaucher         ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ char	*ft_strdup(const char *str)
 	copie[i] = '\0';
 	return (copie);
 }
-/*
-
-int	main(int argc, char **argv)
-{
-	(void)argc;
-	printf("%s\n", argv[1]);
-}
-*/

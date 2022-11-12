@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 10:32:58 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/06 10:53:10 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libft.h"
-// REGARDER !! PAS TOUT COMPRIS !!! 
+
 static char	*ft_strndup(const char *s, int n)
 {
 	char	*res;

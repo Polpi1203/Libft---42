@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 09:44:03 by afaucher          #+#    #+#             */
-/*   Updated: 2022/11/03 18:50:21 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (str);
 }
-/*
-int	main(int argc, char **argv)
-{
-	(void)argc;
-	(void)argv;
-	printf("%s\n", ft_substr("abcdefghijklmnopppppppp", 7, 10));
-}
-*/

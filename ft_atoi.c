@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: polpi <polpi@student.42.fr>                +#+  +:+       +#+        */
+/*   By: afaucher <afaucher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 20:11:03 by polpi             #+#    #+#             */
-/*   Updated: 2022/10/30 14:50:42 by polpi            ###   ########.fr       */
+/*   Updated: 2022/11/12 10:22:24 by afaucher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * p);
 }
-/*
-int main(int argc, char **argv)
-{
-	(void)argc;
-
-	printf("%d\n", ft_atoi(argv[1]));
-	printf("%d\n", atoi(argv[1]));
-}
-*/
